@@ -222,3 +222,13 @@ footer a{color:#94A3B8}
 .cpa-list li{padding:14px 0 14px 18px;border-left:3px solid #DBEAFE;margin-bottom:12px;font-size:15.5px;color:#111827}
 .cpa-list li small{display:block;font-size:13.5px;color:#6B7280;font-weight:400;margin-top:4px;line-height:1.6}
 .cpa-cta{display:flex;gap:9px;flex-wrap:wrap}
+
+/* 문의 접수 완료 — 페이지를 떠나지 않고 폼 자리에 표시 */
+.form-done{display:none;background:#fff;border:1px solid #DBEAFE;border-radius:16px;padding:54px 34px;text-align:center;box-shadow:0 1px 3px rgba(16,24,40,.04)}
+.form-done.on{display:block}
+.form-done .chk{width:62px;height:62px;margin:0 auto 20px;border-radius:50%;background:#EFF6FF;color:#1D4ED8;font-size:30px;line-height:62px;font-weight:700}
+.form-done h3{font-size:21px;margin-bottom:14px}
+.form-done p{font-size:15.5px;color:#4B5563;line-height:1.8;margin-bottom:10px}
+.form-done .urgent{font-size:14px;color:#6B7280;margin-top:20px;padding-top:18px;border-top:1px solid #F1F5F9}
+.form-done .urgent a{color:#1D4ED8;font-weight:700}
+.contact-form.sending button{opacity:.6;pointer-events:none}
