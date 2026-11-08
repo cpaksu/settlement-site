@@ -377,6 +377,8 @@
       <input type="hidden" name="access_key" value="dca984ea-2cb7-4f13-b2e1-72578f1d01be">
       <input type="hidden" name="subject" value="[보조금 정산검증] 홈페이지 문의">
       <input type="hidden" name="from_name" value="정산검증.kr">
+      <!-- 완료 후 우리 한글 페이지로. Web3Forms 기본 완료 화면이 영문이라 교체 -->
+      <input type="hidden" name="redirect" value="https://xn--c79av69aimf4sb.kr/thanks.html">
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
       <input type="hidden" name="자가진단" id="f_diag" value="진행 안 함">
 
@@ -441,15 +443,10 @@
       </label>
 
       <button type="submit" class="btn btn-pri wide">검증 문의 보내기</button>
-      <p class="fnote">보내신 내용은 김시욱 회계사에게 바로 전달됩니다. 평일 기준 1영업일 안에 회신드립니다.</p>
+      <p class="fnote">보내신 내용은 김시욱 회계사에게 바로 전달됩니다. 접수 즉시 확인하고, 평일 영업시간에는 <b>2시간 안에</b> 회신드립니다.<br>기한이 급하시면 <a href="tel:010-3647-7238">010-3647-7238</a> 로 바로 연락 주십시오. (24시간)</p>
     </form>
 
-    <div class="form-done" id="formDone">
-      <div class="chk">✓</div>
-      <h3>문의가 접수되었습니다</h3>
-      <p>김시욱 회계사에게 바로 전달되었습니다.<br>평일 기준 <b>1영업일 안에</b> 적어 주신 연락처로 회신드리겠습니다.</p>
-      <p class="urgent">기한이 급하시면 <a href="tel:010-3647-7238">010-3647-7238</a> 로 바로 연락 주십시오.</p>
-    </div>
+    
 
   </div>
 </section>
@@ -566,33 +563,7 @@
   }
 })();
 
-/* 문의 폼 — 페이지를 떠나지 않고 보낸다.
-   Web3Forms 기본 완료 화면이 영문이라 기관 담당자에게 어색하고,
-   사이트를 벗어나 버려 다시 돌아와야 한다. */
-(function(){
-  var f=document.getElementById('inquiry'), done=document.getElementById('formDone');
-  if(!f||!done) return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    f.classList.add('sending');
-    var btn=f.querySelector('button[type=submit]'), label=btn.textContent;
-    btn.textContent='\uBCF4\uB0B4\uB294 \uC911\u2026';
-    fetch('https://api.web3forms.com/submit',{
-      method:'POST', headers:{'Accept':'application/json'}, body:new FormData(f)
-    }).then(function(r){ return r.json(); })
-      .then(function(d){
-        if(!d.success) throw new Error('fail');
-        f.style.display='none';
-        done.classList.add('on');
-        done.scrollIntoView({behavior:'smooth',block:'center'});
-      })
-      .catch(function(){
-        f.classList.remove('sending');
-        btn.textContent=label;
-        alert('\uC804\uC1A1\uC5D0 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.\n010-3647-7238 \uB85C \uC5F0\uB77D \uC8FC\uC2DC\uAC70\uB098 \uC7A0\uC2DC \uD6C4 \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC2ED\uC2DC\uC624.');
-      });
-  });
-})();
+
 </script>
 
 </body>
