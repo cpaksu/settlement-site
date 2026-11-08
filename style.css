@@ -232,12 +232,3 @@ footer a{color:#94A3B8}
 .form-done .urgent{font-size:14px;color:#6B7280;margin-top:20px;padding-top:18px;border-top:1px solid #F1F5F9}
 .form-done .urgent a{color:#1D4ED8;font-weight:700}
 .contact-form.sending button{opacity:.6;pointer-events:none}
-
-/* 히어로 — 좌 텍스트 / 우 사진 */
-.hero-top{display:grid;grid-template-columns:1fr 330px;gap:52px;align-items:center;margin-bottom:34px}
-@media(max-width:900px){.hero-top{grid-template-columns:1fr;gap:28px}.hero-photo{max-width:260px;margin:0 auto}}
-.hero-text .lead{margin-bottom:28px}
-.hero-photo{margin:0}
-.hero-photo img{width:100%;height:auto;border-radius:14px;display:block;box-shadow:0 12px 34px rgba(16,24,40,.13)}
-.hero-photo figcaption{margin-top:12px;text-align:center;font-size:13.5px;color:#6B7280}
-.hero-photo figcaption b{color:#111827}
