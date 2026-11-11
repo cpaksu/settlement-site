@@ -16,7 +16,16 @@ nav a:hover{color:#1D4ED8}
 .btn{display:inline-block;padding:10px 18px;border-radius:6px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent;white-space:nowrap}
 .btn-pri{background:#1D4ED8;color:#fff}
 .btn-out{border-color:#CBD5E1;color:#374151}
-@media(max-width:860px){nav,.hd-cta .btn-out{display:none}}
+.btn-kakao{background:#FEE500;color:#191919}
+@media(max-width:860px){nav,.hd-cta .btn-out,.hd-cta .btn-kakao{display:none}}
+
+/* 카카오톡 플로팅 버튼 — 전 페이지 우하단 */
+.kakao-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:8px;
+  background:#FEE500;color:#191919;text-decoration:none;font-weight:700;font-size:15px;
+  padding:12px 18px 12px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.kakao-float:hover{box-shadow:0 8px 26px rgba(0,0,0,.24)}
+@media(max-width:560px){.kakao-float{right:14px;bottom:14px;padding:12px}.kakao-float span{display:none}}
+.ccard-kakao{background:#FFFBE0;border-color:#FDE68A}
 
 /* 히어로 */
 .hero{background:linear-gradient(180deg,#F8FAFC 0%,#fff 100%);padding:72px 0 60px;border-bottom:1px solid #F1F5F9}
