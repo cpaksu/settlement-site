@@ -19,7 +19,7 @@ nav a:hover{color:#1D4ED8}
 .btn-out{border-color:#CBD5E1;color:#374151}
 .btn-kakao{background:#FEE500;color:#191919}
 @media(max-width:1000px){nav{display:none}}
-@media(max-width:860px){.hd-cta .btn-out{display:none}}
+@media(max-width:860px){.hd-cta .btn-out,.hd-cta .btn-kakao{display:none}}
 
 /* 카카오톡 플로팅 버튼 — 전 페이지 우하단 */
 .kakao-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:8px;
