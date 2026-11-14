@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+
+Sitemap: https://xn--c79av69aimf4sb.kr/sitemap.xml
